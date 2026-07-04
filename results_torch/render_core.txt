@@ -1,0 +1,57 @@
+
+====================================================================================================
+### tab:main  (operating envelope; bold best per column within block)
+====================================================================================================
+Clean & Source only & \textbf{0.9924}$\pm$0.0083 & \textbf{0.9924}$\pm$0.0083 & 0.0160$\pm$0.0035 & 0.0329$\pm$0.0199 \\
+Clean & Tent & 0.9914$\pm$0.0082 & 0.9914$\pm$0.0082 & \textbf{0.0131}$\pm$0.0028 & \textbf{0.0313}$\pm$0.0208 \\
+Clean & EATA & \textbf{0.9924}$\pm$0.0083 & \textbf{0.9924}$\pm$0.0083 & 0.0159$\pm$0.0034 & 0.0328$\pm$0.0200 \\
+Clean & Matcha & \textbf{0.9924}$\pm$0.0083 & \textbf{0.9924}$\pm$0.0083 & 0.0148$\pm$0.0040 & 0.0327$\pm$0.0203 \\
+Clean & Entropy all nodes & 0.9914$\pm$0.0082 & 0.9914$\pm$0.0082 & \textbf{0.0131}$\pm$0.0028 & \textbf{0.0313}$\pm$0.0208 \\
+Clean & Full method & \textbf{0.9924}$\pm$0.0083 & \textbf{0.9924}$\pm$0.0083 & 0.0143$\pm$0.0040 & 0.0321$\pm$0.0203 \\
+\cmidrule(lr){1-6}
+Feature noise (0.20) & Source only & \textbf{0.9914}$\pm$0.0063 & \textbf{0.9914}$\pm$0.0063 & 0.0173$\pm$0.0022 & 0.0336$\pm$0.0198 \\
+Feature noise (0.20) & Entropy all nodes & \textbf{0.9914}$\pm$0.0063 & \textbf{0.9914}$\pm$0.0063 & \textbf{0.0140}$\pm$0.0031 & \textbf{0.0319}$\pm$0.0207 \\
+Feature noise (0.20) & Full method & \textbf{0.9914}$\pm$0.0063 & \textbf{0.9914}$\pm$0.0063 & 0.0153$\pm$0.0027 & 0.0328$\pm$0.0202 \\
+\cmidrule(lr){1-6}
+Feature noise (0.45) & Source only & \textbf{0.9876}$\pm$0.0083 & \textbf{0.9876}$\pm$0.0083 & 0.0209$\pm$0.0038 & 0.0438$\pm$0.0251 \\
+Feature noise (0.45) & Entropy all nodes & 0.9867$\pm$0.0102 & 0.9867$\pm$0.0102 & 0.0181$\pm$0.0036 & \textbf{0.0405}$\pm$0.0245 \\
+Feature noise (0.45) & Full method & 0.9867$\pm$0.0102 & 0.9867$\pm$0.0102 & \textbf{0.0180}$\pm$0.0033 & 0.0419$\pm$0.0246 \\
+\cmidrule(lr){1-6}
+Edge drop (0.15) & Source only & \textbf{0.9838}$\pm$0.0088 & \textbf{0.9838}$\pm$0.0088 & 0.0190$\pm$0.0080 & 0.0496$\pm$0.0258 \\
+Edge drop (0.15) & Entropy all nodes & \textbf{0.9838}$\pm$0.0088 & \textbf{0.9838}$\pm$0.0088 & 0.0188$\pm$0.0075 & \textbf{0.0487}$\pm$0.0269 \\
+Edge drop (0.15) & Full method & \textbf{0.9838}$\pm$0.0088 & \textbf{0.9838}$\pm$0.0088 & \textbf{0.0178}$\pm$0.0080 & 0.0492$\pm$0.0265 \\
+\cmidrule(lr){1-6}
+Edge drop (0.35) & Source only & 0.9648$\pm$0.0130 & 0.9648$\pm$0.0129 & 0.0228$\pm$0.0051 & 0.0835$\pm$0.0235 \\
+Edge drop (0.35) & Entropy all nodes & \textbf{0.9657}$\pm$0.0143 & \textbf{0.9657}$\pm$0.0141 & 0.0186$\pm$0.0041 & \textbf{0.0824}$\pm$0.0255 \\
+Edge drop (0.35) & Full method & \textbf{0.9657}$\pm$0.0143 & \textbf{0.9657}$\pm$0.0141 & \textbf{0.0185}$\pm$0.0034 & 0.0834$\pm$0.0252 \\
+\cmidrule(lr){1-6}
+Edge add (0.15) & Source only & \textbf{0.9848}$\pm$0.0139 & \textbf{0.9848}$\pm$0.0139 & 0.0273$\pm$0.0048 & 0.0566$\pm$0.0287 \\
+Edge add (0.15) & Entropy all nodes & 0.9838$\pm$0.0137 & 0.9838$\pm$0.0136 & 0.0255$\pm$0.0055 & \textbf{0.0524}$\pm$0.0298 \\
+Edge add (0.15) & Full method & 0.9838$\pm$0.0137 & 0.9838$\pm$0.0136 & \textbf{0.0252}$\pm$0.0044 & 0.0539$\pm$0.0292 \\
+\cmidrule(lr){1-6}
+Edge add (0.35) & Source only & 0.9695$\pm$0.0194 & 0.9696$\pm$0.0194 & 0.0457$\pm$0.0057 & 0.0975$\pm$0.0319 \\
+Edge add (0.35) & Tent & \textbf{0.9762}$\pm$0.0197 & \textbf{0.9762}$\pm$0.0198 & 0.0439$\pm$0.0072 & \textbf{0.0880}$\pm$0.0337 \\
+Edge add (0.35) & EATA & 0.9705$\pm$0.0203 & 0.9705$\pm$0.0202 & 0.0444$\pm$0.0059 & 0.0940$\pm$0.0329 \\
+Edge add (0.35) & Matcha & 0.9714$\pm$0.0206 & 0.9715$\pm$0.0206 & 0.0432$\pm$0.0077 & 0.0935$\pm$0.0359 \\
+Edge add (0.35) & Entropy all nodes & \textbf{0.9762}$\pm$0.0197 & \textbf{0.9762}$\pm$0.0198 & 0.0439$\pm$0.0075 & 0.0882$\pm$0.0337 \\
+Edge add (0.35) & Full method & 0.9743$\pm$0.0187 & 0.9742$\pm$0.0188 & \textbf{0.0423}$\pm$0.0047 & 0.0902$\pm$0.0337 \\
+\cmidrule(lr){1-6}
+Degree shift (0.35) & Source only & \textbf{0.9924}$\pm$0.0083 & \textbf{0.9924}$\pm$0.0083 & 0.0160$\pm$0.0035 & 0.0329$\pm$0.0199 \\
+Degree shift (0.35) & Entropy all nodes & 0.9914$\pm$0.0082 & 0.9914$\pm$0.0082 & \textbf{0.0131}$\pm$0.0028 & \textbf{0.0313}$\pm$0.0208 \\
+Degree shift (0.35) & Full method & \textbf{0.9924}$\pm$0.0083 & \textbf{0.9924}$\pm$0.0083 & 0.0143$\pm$0.0040 & 0.0321$\pm$0.0203 \\
+\cmidrule(lr){1-6}
+Homophily shift (0.25) & Source only & 0.8810$\pm$0.0217 & 0.8809$\pm$0.0219 & 0.0528$\pm$0.0095 & 0.2930$\pm$0.0394 \\
+Homophily shift (0.25) & Tent & 0.8838$\pm$0.0212 & 0.8838$\pm$0.0213 & 0.0439$\pm$0.0074 & 0.2907$\pm$0.0488 \\
+Homophily shift (0.25) & EATA & 0.8810$\pm$0.0223 & 0.8809$\pm$0.0225 & 0.0543$\pm$0.0120 & \textbf{0.2902}$\pm$0.0410 \\
+Homophily shift (0.25) & Matcha & 0.8800$\pm$0.0230 & 0.8802$\pm$0.0231 & \textbf{0.0433}$\pm$0.0063 & 0.2985$\pm$0.0491 \\
+Homophily shift (0.25) & Entropy all nodes & 0.8838$\pm$0.0212 & 0.8838$\pm$0.0213 & 0.0447$\pm$0.0065 & 0.2906$\pm$0.0485 \\
+Homophily shift (0.25) & Full method & \textbf{0.8848}$\pm$0.0216 & \textbf{0.8847}$\pm$0.0217 & 0.0475$\pm$0.0113 & 0.2960$\pm$0.0494 \\
+\cmidrule(lr){1-6}
+Traceback (most recent call last):
+  File "C:\Users\Chnoor\Desktop\all paper\Neurocomputing\reliability_aware_gnn_tta_paper\code_torch\render_paper_numbers.py", line 605, in <module>
+    ALL[t]()
+    ~~~~~~^^
+  File "C:\Users\Chnoor\Desktop\all paper\Neurocomputing\reliability_aware_gnn_tta_paper\code_torch\render_paper_numbers.py", line 116, in tab_main
+    block = [(name if name != "Full method" else "Full method (no detector)",) + tup
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+TypeError: can only concatenate tuple (not "list") to tuple

@@ -1,0 +1,1054 @@
+{
+  "records": [
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.3,
+      "measured_homophily": 0.7592468056489576,
+      "used_homophily": 0.45924680564895765,
+      "accuracy": 0.9575757575757575,
+      "ece": 0.02429908514022827
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.2,
+      "measured_homophily": 0.7592468056489576,
+      "used_homophily": 0.5592468056489577,
+      "accuracy": 0.9575757575757575,
+      "ece": 0.025107384811748158
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.1,
+      "measured_homophily": 0.7592468056489576,
+      "used_homophily": 0.6592468056489577,
+      "accuracy": 0.9575757575757575,
+      "ece": 0.025107222253626042
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.0,
+      "measured_homophily": 0.7592468056489576,
+      "used_homophily": 0.7592468056489576,
+      "accuracy": 0.9575757575757575,
+      "ece": 0.025106721935850205
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.1,
+      "measured_homophily": 0.7592468056489576,
+      "used_homophily": 0.8592468056489576,
+      "accuracy": 0.9575757575757575,
+      "ece": 0.025106672807173297
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.2,
+      "measured_homophily": 0.7592468056489576,
+      "used_homophily": 0.9592468056489576,
+      "accuracy": 0.9575757575757575,
+      "ece": 0.025106587193228988
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.3,
+      "measured_homophily": 0.7592468056489576,
+      "used_homophily": 1.0,
+      "accuracy": 0.9575757575757575,
+      "ece": 0.025106476653705946
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.3,
+      "measured_homophily": 0.6442451420029895,
+      "used_homophily": 0.34424514200298956,
+      "accuracy": 0.9636363636363636,
+      "ece": 0.0491114818688595
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.2,
+      "measured_homophily": 0.6442451420029895,
+      "used_homophily": 0.44424514200298953,
+      "accuracy": 0.9636363636363636,
+      "ece": 0.04911612344510627
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.1,
+      "measured_homophily": 0.6442451420029895,
+      "used_homophily": 0.5442451420029896,
+      "accuracy": 0.9636363636363636,
+      "ece": 0.049121442708102134
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.0,
+      "measured_homophily": 0.6442451420029895,
+      "used_homophily": 0.6442451420029895,
+      "accuracy": 0.9636363636363636,
+      "ece": 0.04912585598049742
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.1,
+      "measured_homophily": 0.6442451420029895,
+      "used_homophily": 0.7442451420029895,
+      "accuracy": 0.9636363636363636,
+      "ece": 0.04912925452897042
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.2,
+      "measured_homophily": 0.6442451420029895,
+      "used_homophily": 0.8442451420029895,
+      "accuracy": 0.9636363636363636,
+      "ece": 0.04913100509932547
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.3,
+      "measured_homophily": 0.6442451420029895,
+      "used_homophily": 0.9442451420029896,
+      "accuracy": 0.9636363636363636,
+      "ece": 0.04913294134717999
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.3,
+      "measured_homophily": 0.5938130464021519,
+      "used_homophily": 0.29381304640215195,
+      "accuracy": 0.793939393939394,
+      "ece": 0.08592132564746971
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.2,
+      "measured_homophily": 0.5938130464021519,
+      "used_homophily": 0.3938130464021519,
+      "accuracy": 0.793939393939394,
+      "ece": 0.08603095466440375
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.1,
+      "measured_homophily": 0.5938130464021519,
+      "used_homophily": 0.49381304640215196,
+      "accuracy": 0.793939393939394,
+      "ece": 0.08428881222551521
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.0,
+      "measured_homophily": 0.5938130464021519,
+      "used_homophily": 0.5938130464021519,
+      "accuracy": 0.793939393939394,
+      "ece": 0.08358790531302945
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.1,
+      "measured_homophily": 0.5938130464021519,
+      "used_homophily": 0.6938130464021519,
+      "accuracy": 0.793939393939394,
+      "ece": 0.0837124353105372
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.2,
+      "measured_homophily": 0.5938130464021519,
+      "used_homophily": 0.793813046402152,
+      "accuracy": 0.793939393939394,
+      "ece": 0.08383481430284907
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.3,
+      "measured_homophily": 0.5938130464021519,
+      "used_homophily": 0.8938130464021519,
+      "accuracy": 0.793939393939394,
+      "ece": 0.09690283807841218
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.3,
+      "measured_homophily": 0.7326666666666667,
+      "used_homophily": 0.4326666666666667,
+      "accuracy": 0.9515151515151515,
+      "ece": 0.039218154098048325
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.2,
+      "measured_homophily": 0.7326666666666667,
+      "used_homophily": 0.5326666666666666,
+      "accuracy": 0.9515151515151515,
+      "ece": 0.039223359931598985
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.1,
+      "measured_homophily": 0.7326666666666667,
+      "used_homophily": 0.6326666666666667,
+      "accuracy": 0.9515151515151515,
+      "ece": 0.03922868967056272
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.0,
+      "measured_homophily": 0.7326666666666667,
+      "used_homophily": 0.7326666666666667,
+      "accuracy": 0.9515151515151515,
+      "ece": 0.039233519814231156
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.1,
+      "measured_homophily": 0.7326666666666667,
+      "used_homophily": 0.8326666666666667,
+      "accuracy": 0.9515151515151515,
+      "ece": 0.03944311900572341
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.2,
+      "measured_homophily": 0.7326666666666667,
+      "used_homophily": 0.9326666666666668,
+      "accuracy": 0.9515151515151515,
+      "ece": 0.039434638529112824
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.3,
+      "measured_homophily": 0.7326666666666667,
+      "used_homophily": 1.0,
+      "accuracy": 0.9515151515151515,
+      "ece": 0.03943023753888677
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.3,
+      "measured_homophily": 0.6232098765432099,
+      "used_homophily": 0.32320987654320993,
+      "accuracy": 0.9272727272727272,
+      "ece": 0.04229601802247944
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.2,
+      "measured_homophily": 0.6232098765432099,
+      "used_homophily": 0.4232098765432099,
+      "accuracy": 0.9272727272727272,
+      "ece": 0.0422920848384048
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.1,
+      "measured_homophily": 0.6232098765432099,
+      "used_homophily": 0.5232098765432099,
+      "accuracy": 0.9272727272727272,
+      "ece": 0.04228782978924838
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.0,
+      "measured_homophily": 0.6232098765432099,
+      "used_homophily": 0.6232098765432099,
+      "accuracy": 0.9272727272727272,
+      "ece": 0.042285579262357764
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.1,
+      "measured_homophily": 0.6232098765432099,
+      "used_homophily": 0.7232098765432099,
+      "accuracy": 0.9272727272727272,
+      "ece": 0.04228131120855158
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.2,
+      "measured_homophily": 0.6232098765432099,
+      "used_homophily": 0.8232098765432099,
+      "accuracy": 0.9272727272727272,
+      "ece": 0.04227671984470252
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.3,
+      "measured_homophily": 0.6232098765432099,
+      "used_homophily": 0.92320987654321,
+      "accuracy": 0.9272727272727272,
+      "ece": 0.042272629882350116
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.3,
+      "measured_homophily": 0.5646666666666667,
+      "used_homophily": 0.26466666666666666,
+      "accuracy": 0.806060606060606,
+      "ece": 0.09802850737716211
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.2,
+      "measured_homophily": 0.5646666666666667,
+      "used_homophily": 0.36466666666666664,
+      "accuracy": 0.806060606060606,
+      "ece": 0.09801684329003998
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.1,
+      "measured_homophily": 0.5646666666666667,
+      "used_homophily": 0.4646666666666667,
+      "accuracy": 0.806060606060606,
+      "ece": 0.09764405326409774
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.0,
+      "measured_homophily": 0.5646666666666667,
+      "used_homophily": 0.5646666666666667,
+      "accuracy": 0.806060606060606,
+      "ece": 0.09357215075781855
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.1,
+      "measured_homophily": 0.5646666666666667,
+      "used_homophily": 0.6646666666666666,
+      "accuracy": 0.806060606060606,
+      "ece": 0.08723485596252212
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.2,
+      "measured_homophily": 0.5646666666666667,
+      "used_homophily": 0.7646666666666666,
+      "accuracy": 0.806060606060606,
+      "ece": 0.08736573981516292
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.3,
+      "measured_homophily": 0.5646666666666667,
+      "used_homophily": 0.8646666666666667,
+      "accuracy": 0.806060606060606,
+      "ece": 0.09232203454682325
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.3,
+      "measured_homophily": 0.7618737800910865,
+      "used_homophily": 0.46187378009108654,
+      "accuracy": 0.9939393939393939,
+      "ece": 0.018083945548895634
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.2,
+      "measured_homophily": 0.7618737800910865,
+      "used_homophily": 0.5618737800910865,
+      "accuracy": 0.9939393939393939,
+      "ece": 0.01808443358450225
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.1,
+      "measured_homophily": 0.7618737800910865,
+      "used_homophily": 0.6618737800910865,
+      "accuracy": 0.9939393939393939,
+      "ece": 0.018084675254243794
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.0,
+      "measured_homophily": 0.7618737800910865,
+      "used_homophily": 0.7618737800910865,
+      "accuracy": 0.9939393939393939,
+      "ece": 0.01808499964800748
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.1,
+      "measured_homophily": 0.7618737800910865,
+      "used_homophily": 0.8618737800910865,
+      "accuracy": 0.9939393939393939,
+      "ece": 0.018085048415444116
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.2,
+      "measured_homophily": 0.7618737800910865,
+      "used_homophily": 0.9618737800910866,
+      "accuracy": 0.9939393939393939,
+      "ece": 0.018084953048012477
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.3,
+      "measured_homophily": 0.7618737800910865,
+      "used_homophily": 1.0,
+      "accuracy": 0.9939393939393939,
+      "ece": 0.01808489994569258
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.3,
+      "measured_homophily": 0.6460945033751205,
+      "used_homophily": 0.34609450337512054,
+      "accuracy": 0.9696969696969697,
+      "ece": 0.045016418442581634
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.2,
+      "measured_homophily": 0.6460945033751205,
+      "used_homophily": 0.4460945033751205,
+      "accuracy": 0.9696969696969697,
+      "ece": 0.04502518592458783
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.1,
+      "measured_homophily": 0.6460945033751205,
+      "used_homophily": 0.5460945033751206,
+      "accuracy": 0.9696969696969697,
+      "ece": 0.04503485289486972
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.0,
+      "measured_homophily": 0.6460945033751205,
+      "used_homophily": 0.6460945033751205,
+      "accuracy": 0.9696969696969697,
+      "ece": 0.0450417955716451
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.1,
+      "measured_homophily": 0.6460945033751205,
+      "used_homophily": 0.7460945033751205,
+      "accuracy": 0.9696969696969697,
+      "ece": 0.045049512386322016
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.2,
+      "measured_homophily": 0.6460945033751205,
+      "used_homophily": 0.8460945033751206,
+      "accuracy": 0.9696969696969697,
+      "ece": 0.045051107984600644
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.3,
+      "measured_homophily": 0.6460945033751205,
+      "used_homophily": 0.9460945033751205,
+      "accuracy": 0.9696969696969697,
+      "ece": 0.04505311611926917
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.3,
+      "measured_homophily": 0.5790500975927131,
+      "used_homophily": 0.2790500975927131,
+      "accuracy": 0.8909090909090909,
+      "ece": 0.055840387308236344
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.2,
+      "measured_homophily": 0.5790500975927131,
+      "used_homophily": 0.3790500975927131,
+      "accuracy": 0.8909090909090909,
+      "ece": 0.05895695559906237
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.1,
+      "measured_homophily": 0.5790500975927131,
+      "used_homophily": 0.4790500975927131,
+      "accuracy": 0.8909090909090909,
+      "ece": 0.05894495158484489
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.0,
+      "measured_homophily": 0.5790500975927131,
+      "used_homophily": 0.5790500975927131,
+      "accuracy": 0.896969696969697,
+      "ece": 0.06497973853891546
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.1,
+      "measured_homophily": 0.5790500975927131,
+      "used_homophily": 0.6790500975927131,
+      "accuracy": 0.896969696969697,
+      "ece": 0.06818117390979421
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.2,
+      "measured_homophily": 0.5790500975927131,
+      "used_homophily": 0.779050097592713,
+      "accuracy": 0.896969696969697,
+      "ece": 0.0681329683824019
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.3,
+      "measured_homophily": 0.5790500975927131,
+      "used_homophily": 0.8790500975927131,
+      "accuracy": 0.896969696969697,
+      "ece": 0.06809174833875713
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.3,
+      "measured_homophily": 0.7548301132578281,
+      "used_homophily": 0.45483011325782813,
+      "accuracy": 0.9757575757575757,
+      "ece": 0.023664404767932315
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.2,
+      "measured_homophily": 0.7548301132578281,
+      "used_homophily": 0.5548301132578282,
+      "accuracy": 0.9757575757575757,
+      "ece": 0.023661237051992703
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.1,
+      "measured_homophily": 0.7548301132578281,
+      "used_homophily": 0.6548301132578281,
+      "accuracy": 0.9757575757575757,
+      "ece": 0.023656856471841986
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.0,
+      "measured_homophily": 0.7548301132578281,
+      "used_homophily": 0.7548301132578281,
+      "accuracy": 0.9757575757575757,
+      "ece": 0.02365248582579873
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.1,
+      "measured_homophily": 0.7548301132578281,
+      "used_homophily": 0.8548301132578281,
+      "accuracy": 0.9757575757575757,
+      "ece": 0.023647765860413058
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.2,
+      "measured_homophily": 0.7548301132578281,
+      "used_homophily": 0.9548301132578281,
+      "accuracy": 0.9757575757575757,
+      "ece": 0.02364293264620232
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.3,
+      "measured_homophily": 0.7548301132578281,
+      "used_homophily": 1.0,
+      "accuracy": 0.9757575757575757,
+      "ece": 0.023640645453424165
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.3,
+      "measured_homophily": 0.6441263573543929,
+      "used_homophily": 0.34412635735439295,
+      "accuracy": 0.9757575757575757,
+      "ece": 0.047141281763712566
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.2,
+      "measured_homophily": 0.6441263573543929,
+      "used_homophily": 0.44412635735439293,
+      "accuracy": 0.9757575757575757,
+      "ece": 0.04716226223743323
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.1,
+      "measured_homophily": 0.6441263573543929,
+      "used_homophily": 0.544126357354393,
+      "accuracy": 0.9757575757575757,
+      "ece": 0.047181098750143334
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.0,
+      "measured_homophily": 0.6441263573543929,
+      "used_homophily": 0.6441263573543929,
+      "accuracy": 0.9757575757575757,
+      "ece": 0.0471996419357531
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.1,
+      "measured_homophily": 0.6441263573543929,
+      "used_homophily": 0.7441263573543929,
+      "accuracy": 0.9757575757575757,
+      "ece": 0.0472171740098433
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.2,
+      "measured_homophily": 0.6441263573543929,
+      "used_homophily": 0.8441263573543929,
+      "accuracy": 0.9757575757575757,
+      "ece": 0.04723359382513797
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.3,
+      "measured_homophily": 0.6441263573543929,
+      "used_homophily": 0.944126357354393,
+      "accuracy": 0.9757575757575757,
+      "ece": 0.0472491058436307
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.3,
+      "measured_homophily": 0.5889407061958695,
+      "used_homophily": 0.2889407061958695,
+      "accuracy": 0.8545454545454545,
+      "ece": 0.07304033637046813
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.2,
+      "measured_homophily": 0.5889407061958695,
+      "used_homophily": 0.38894070619586946,
+      "accuracy": 0.8545454545454545,
+      "ece": 0.07305715969114591
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.1,
+      "measured_homophily": 0.5889407061958695,
+      "used_homophily": 0.4889407061958695,
+      "accuracy": 0.8545454545454545,
+      "ece": 0.07307049198584122
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.0,
+      "measured_homophily": 0.5889407061958695,
+      "used_homophily": 0.5889407061958695,
+      "accuracy": 0.8545454545454545,
+      "ece": 0.07792479215246262
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.1,
+      "measured_homophily": 0.5889407061958695,
+      "used_homophily": 0.6889407061958694,
+      "accuracy": 0.8545454545454545,
+      "ece": 0.07791468645587116
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.2,
+      "measured_homophily": 0.5889407061958695,
+      "used_homophily": 0.7889407061958695,
+      "accuracy": 0.8545454545454545,
+      "ece": 0.077908546816219
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.3,
+      "measured_homophily": 0.5889407061958695,
+      "used_homophily": 0.8889407061958694,
+      "accuracy": 0.8545454545454545,
+      "ece": 0.07790184436422408
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.3,
+      "measured_homophily": 0.7491166077738516,
+      "used_homophily": 0.4491166077738516,
+      "accuracy": 0.9818181818181818,
+      "ece": 0.014097207242792313
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.2,
+      "measured_homophily": 0.7491166077738516,
+      "used_homophily": 0.5491166077738516,
+      "accuracy": 0.9818181818181818,
+      "ece": 0.014097472393151494
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": -0.1,
+      "measured_homophily": 0.7491166077738516,
+      "used_homophily": 0.6491166077738516,
+      "accuracy": 0.9818181818181818,
+      "ece": 0.014097697445840556
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.0,
+      "measured_homophily": 0.7491166077738516,
+      "used_homophily": 0.7491166077738516,
+      "accuracy": 0.9818181818181818,
+      "ece": 0.01166995872150769
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.1,
+      "measured_homophily": 0.7491166077738516,
+      "used_homophily": 0.8491166077738516,
+      "accuracy": 0.9818181818181818,
+      "ece": 0.011664059667876283
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.2,
+      "measured_homophily": 0.7491166077738516,
+      "used_homophily": 0.9491166077738515,
+      "accuracy": 0.9818181818181818,
+      "ece": 0.011658928611061799
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "delta": 0.3,
+      "measured_homophily": 0.7491166077738516,
+      "used_homophily": 1.0,
+      "accuracy": 0.9818181818181818,
+      "ece": 0.011656526002016943
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.3,
+      "measured_homophily": 0.6397905759162303,
+      "used_homophily": 0.33979057591623035,
+      "accuracy": 0.9515151515151515,
+      "ece": 0.023170873613068545
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.2,
+      "measured_homophily": 0.6397905759162303,
+      "used_homophily": 0.43979057591623033,
+      "accuracy": 0.9515151515151515,
+      "ece": 0.023111988920153988
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": -0.1,
+      "measured_homophily": 0.6397905759162303,
+      "used_homophily": 0.5397905759162304,
+      "accuracy": 0.9515151515151515,
+      "ece": 0.02305055784456657
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.0,
+      "measured_homophily": 0.6397905759162303,
+      "used_homophily": 0.6397905759162303,
+      "accuracy": 0.9515151515151515,
+      "ece": 0.022991425702066123
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.1,
+      "measured_homophily": 0.6397905759162303,
+      "used_homophily": 0.7397905759162303,
+      "accuracy": 0.9515151515151515,
+      "ece": 0.022930485913247763
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.2,
+      "measured_homophily": 0.6397905759162303,
+      "used_homophily": 0.8397905759162303,
+      "accuracy": 0.9515151515151515,
+      "ece": 0.022864520911014437
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "delta": 0.3,
+      "measured_homophily": 0.6397905759162303,
+      "used_homophily": 0.9397905759162304,
+      "accuracy": 0.9515151515151515,
+      "ece": 0.023491668701171874
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.3,
+      "measured_homophily": 0.5731448763250884,
+      "used_homophily": 0.2731448763250884,
+      "accuracy": 0.8424242424242424,
+      "ece": 0.06331053069143583
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.2,
+      "measured_homophily": 0.5731448763250884,
+      "used_homophily": 0.37314487632508836,
+      "accuracy": 0.8424242424242424,
+      "ece": 0.06410926002444642
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": -0.1,
+      "measured_homophily": 0.5731448763250884,
+      "used_homophily": 0.4731448763250884,
+      "accuracy": 0.8424242424242424,
+      "ece": 0.07137425126451434
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.0,
+      "measured_homophily": 0.5731448763250884,
+      "used_homophily": 0.5731448763250884,
+      "accuracy": 0.8424242424242424,
+      "ece": 0.06408464402863472
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.1,
+      "measured_homophily": 0.5731448763250884,
+      "used_homophily": 0.6731448763250883,
+      "accuracy": 0.8424242424242424,
+      "ece": 0.0632443901264306
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.2,
+      "measured_homophily": 0.5731448763250884,
+      "used_homophily": 0.7731448763250883,
+      "accuracy": 0.8424242424242424,
+      "ece": 0.06321743040373828
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "delta": 0.3,
+      "measured_homophily": 0.5731448763250884,
+      "used_homophily": 0.8731448763250884,
+      "accuracy": 0.8424242424242424,
+      "ece": 0.0631946776852463
+    }
+  ]
+}

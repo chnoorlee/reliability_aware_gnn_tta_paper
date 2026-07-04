@@ -1,0 +1,2004 @@
+{
+  "records": [
+    {
+      "seed": 0,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.46026787374675837
+    },
+    {
+      "seed": 0,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.28675480548822446
+    },
+    {
+      "seed": 0,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.2205485263337832
+    },
+    {
+      "seed": 0,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.11804651446038979
+    },
+    {
+      "seed": 0,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": 0.004887234207766213
+    },
+    {
+      "seed": 0,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.12655882742015484
+    },
+    {
+      "seed": 0,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.4403446675992999
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.41320675955325437
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.1776246441672169
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.17162844168593694
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": 0.010511009221163051
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.07999178508029395
+    },
+    {
+      "seed": 0,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.4267627346691407
+    },
+    {
+      "seed": 0,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.4381076717600131
+    },
+    {
+      "seed": 0,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.13565005908600714
+    },
+    {
+      "seed": 0,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.1708150090239513
+    },
+    {
+      "seed": 0,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": 0.06898454629528848
+    },
+    {
+      "seed": 0,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.13206762429900992
+    },
+    {
+      "seed": 0,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.5482983553067804
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.5175858724700606
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.12181052486419885
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.324298727299929
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.1103943194679735
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.003604925492298817
+    },
+    {
+      "seed": 0,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.3238127855672486
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.4137312806382839
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.09775081360255651
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.10782507108715453
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.1367302416299294
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.05938887112405227
+    },
+    {
+      "seed": 0,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.4439133976423858
+    },
+    {
+      "seed": 1,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.43732943293577414
+    },
+    {
+      "seed": 1,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.18079334139978734
+    },
+    {
+      "seed": 1,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.18905110003933429
+    },
+    {
+      "seed": 1,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.08939853681199016
+    },
+    {
+      "seed": 1,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.017147782627958845
+    },
+    {
+      "seed": 1,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.4587441226327075
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.3581808840114859
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.2533066654668024
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.14200315000190178
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": 0.07803549152247972
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.039725202069426306
+    },
+    {
+      "seed": 1,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.3963002354677945
+    },
+    {
+      "seed": 1,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.3956432093300748
+    },
+    {
+      "seed": 1,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.09591094698642982
+    },
+    {
+      "seed": 1,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.18283624732539516
+    },
+    {
+      "seed": 1,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.024917665235715123
+    },
+    {
+      "seed": 1,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.09434445505543898
+    },
+    {
+      "seed": 1,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.50366363665852
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.38430279051214666
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.10718815287354368
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.15776055147130136
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.1876026198093084
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": -0.013534751011417089
+    },
+    {
+      "seed": 1,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.4426334464411306
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.4135246708209162
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": -0.029448879595628984
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.20348731127529515
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.1465855298027178
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": -0.07276785180004362
+    },
+    {
+      "seed": 1,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.39620057074174636
+    },
+    {
+      "seed": 2,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.5972247186551185
+    },
+    {
+      "seed": 2,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.10491479845923077
+    },
+    {
+      "seed": 2,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.17550702790860326
+    },
+    {
+      "seed": 2,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.09769359526953028
+    },
+    {
+      "seed": 2,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.10122237879989672
+    },
+    {
+      "seed": 2,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.35779897128829935
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.3639710750871418
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.12264497348968663
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.15351447238543003
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.11281620170572351
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.08057648511951358
+    },
+    {
+      "seed": 2,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.4923786659322266
+    },
+    {
+      "seed": 2,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.18554649226938785
+    },
+    {
+      "seed": 2,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.17012159712088232
+    },
+    {
+      "seed": 2,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.13284882444993873
+    },
+    {
+      "seed": 2,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.05477127687135366
+    },
+    {
+      "seed": 2,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.01923294183325445
+    },
+    {
+      "seed": 2,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.4599202736462913
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.5829411923276714
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.16071115962695232
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.30847626263427075
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.148482370664565
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.14869308904760664
+    },
+    {
+      "seed": 2,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.3532328686740134
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.48003363195022447
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": -0.02789153896349184
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.07535070434917823
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.32062954116745196
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.056624244115886326
+    },
+    {
+      "seed": 2,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.47865235537147194
+    },
+    {
+      "seed": 3,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.3851693752798672
+    },
+    {
+      "seed": 3,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.2165173406941523
+    },
+    {
+      "seed": 3,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.073404568418119
+    },
+    {
+      "seed": 3,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": 0.012096100461530482
+    },
+    {
+      "seed": 3,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.3094772519713357
+    },
+    {
+      "seed": 3,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.5487846021053183
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.4085377227020733
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.13076938402164512
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.2483758547068107
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.011453317277794904
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.08928552215319141
+    },
+    {
+      "seed": 3,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.4126213528133384
+    },
+    {
+      "seed": 3,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.4428904949819599
+    },
+    {
+      "seed": 3,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.1636415747782087
+    },
+    {
+      "seed": 3,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.1739481391988264
+    },
+    {
+      "seed": 3,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.035480776139718326
+    },
+    {
+      "seed": 3,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.043771758876628035
+    },
+    {
+      "seed": 3,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.5087026743693888
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.5172488778999746
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.22610084906623396
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.3049792824084931
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": 0.08143232946002112
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.15669487112600447
+    },
+    {
+      "seed": 3,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.4397041661559732
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.38555771177231213
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.05619478476708575
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.18391702442960364
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.09792680409826214
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.005135378994150741
+    },
+    {
+      "seed": 3,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.42520887298798504
+    },
+    {
+      "seed": 4,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.6701982077374254
+    },
+    {
+      "seed": 4,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.1201332544498709
+    },
+    {
+      "seed": 4,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.28837743483963746
+    },
+    {
+      "seed": 4,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.04780813243963826
+    },
+    {
+      "seed": 4,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.04410234773747543
+    },
+    {
+      "seed": 4,
+      "shift": "clean",
+      "intensity": 0.0,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.409665350756765
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.5902514135227158
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.10608299805199024
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.3233952931578809
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.06022805340823348
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.014238220839292085
+    },
+    {
+      "seed": 4,
+      "shift": "feature_noise",
+      "intensity": 0.45,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.39036949548359906
+    },
+    {
+      "seed": 4,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.2723167016656048
+    },
+    {
+      "seed": 4,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.11365188343370221
+    },
+    {
+      "seed": 4,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.2714763662400037
+    },
+    {
+      "seed": 4,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.08196728041900307
+    },
+    {
+      "seed": 4,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.0027917665759230937
+    },
+    {
+      "seed": 4,
+      "shift": "edge_drop",
+      "intensity": 0.35,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.40498568350423686
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.47920218045428775
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.18738454937892832
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.17814724553497804
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.1742418133191114
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.12117438676697853
+    },
+    {
+      "seed": 4,
+      "shift": "edge_add",
+      "intensity": 0.35,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "agreement",
+      "correlation": 0.35062151692502597
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "stability",
+      "correlation": 0.3611632874275789
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "confidence",
+      "signal_b": "degree",
+      "correlation": 0.07179733675053539
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "stability",
+      "correlation": 0.1622236488788356
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "agreement",
+      "signal_b": "degree",
+      "correlation": -0.1275996251111677
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "stability",
+      "signal_b": "source",
+      "correlation": 0.0
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "stability",
+      "signal_b": "degree",
+      "correlation": 0.19300002202862718
+    },
+    {
+      "seed": 4,
+      "shift": "homophily_shift",
+      "intensity": 0.25,
+      "signal_a": "source",
+      "signal_b": "degree",
+      "correlation": 0.0
+    }
+  ]
+}

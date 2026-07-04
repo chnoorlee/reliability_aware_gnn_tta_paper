@@ -1,0 +1,16 @@
+scale,method,mean_accuracy,mean_ece,mean_runtime
+1000,eata_filter,0.7602,0.0504,7.9863
+1000,entropy_all_nodes,0.7609,0.0505,1.1062
+1000,full_method,0.7611,0.0508,8.2967
+1000,source_only,0.7600,0.0532,0.0000
+1000,tent_entropy,0.7609,0.0505,1.0401
+2000,eata_filter,0.6970,0.0390,17.5589
+2000,entropy_all_nodes,0.6962,0.0368,1.4747
+2000,full_method,0.6970,0.0381,18.5954
+2000,source_only,0.6961,0.0386,0.0000
+2000,tent_entropy,0.6962,0.0368,1.4719
+5000,eata_filter,0.6866,0.0454,57.4742
+5000,entropy_all_nodes,0.6867,0.0462,2.7305
+5000,full_method,0.6868,0.0458,55.2326
+5000,source_only,0.6864,0.0476,0.0000
+5000,tent_entropy,0.6867,0.0462,2.7577

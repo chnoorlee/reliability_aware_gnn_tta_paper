@@ -1,0 +1,404 @@
+{
+  "records": [
+    {
+      "dataset": "actor",
+      "seed": 0,
+      "method": "source_only",
+      "clean_acc": 0.21666666666666667,
+      "shifted_acc": 0.24444444444444444,
+      "ece": 0.041058857555569345
+    },
+    {
+      "dataset": "actor",
+      "seed": 0,
+      "method": "tent_entropy",
+      "clean_acc": 0.21666666666666667,
+      "shifted_acc": 0.24444444444444444,
+      "ece": 0.04101676618089939
+    },
+    {
+      "dataset": "actor",
+      "seed": 0,
+      "method": "eata_filter",
+      "clean_acc": 0.21666666666666667,
+      "shifted_acc": 0.24444444444444444,
+      "ece": 0.04101831900387981
+    },
+    {
+      "dataset": "actor",
+      "seed": 0,
+      "method": "matcha_reliable",
+      "clean_acc": 0.21666666666666667,
+      "shifted_acc": 0.24444444444444444,
+      "ece": 0.04101515310974066
+    },
+    {
+      "dataset": "actor",
+      "seed": 0,
+      "method": "full_method",
+      "clean_acc": 0.21666666666666667,
+      "shifted_acc": 0.24444444444444444,
+      "ece": 0.04101523578984387
+    },
+    {
+      "dataset": "actor",
+      "seed": 1,
+      "method": "source_only",
+      "clean_acc": 0.19444444444444445,
+      "shifted_acc": 0.20555555555555555,
+      "ece": 0.0024362642538629242
+    },
+    {
+      "dataset": "actor",
+      "seed": 1,
+      "method": "tent_entropy",
+      "clean_acc": 0.19444444444444445,
+      "shifted_acc": 0.20555555555555555,
+      "ece": 0.002582134135007741
+    },
+    {
+      "dataset": "actor",
+      "seed": 1,
+      "method": "eata_filter",
+      "clean_acc": 0.19444444444444445,
+      "shifted_acc": 0.20555555555555555,
+      "ece": 0.002579378486696371
+    },
+    {
+      "dataset": "actor",
+      "seed": 1,
+      "method": "matcha_reliable",
+      "clean_acc": 0.19444444444444445,
+      "shifted_acc": 0.20555555555555555,
+      "ece": 0.002585552850877887
+    },
+    {
+      "dataset": "actor",
+      "seed": 1,
+      "method": "full_method",
+      "clean_acc": 0.19444444444444445,
+      "shifted_acc": 0.20555555555555555,
+      "ece": 0.002584963187536732
+    },
+    {
+      "dataset": "actor",
+      "seed": 2,
+      "method": "source_only",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.010922809839349568
+    },
+    {
+      "dataset": "actor",
+      "seed": 2,
+      "method": "tent_entropy",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.011150399648076098
+    },
+    {
+      "dataset": "actor",
+      "seed": 2,
+      "method": "eata_filter",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.011145673799813155
+    },
+    {
+      "dataset": "actor",
+      "seed": 2,
+      "method": "matcha_reliable",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.011186579822419246
+    },
+    {
+      "dataset": "actor",
+      "seed": 2,
+      "method": "full_method",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.011181296741604951
+    },
+    {
+      "dataset": "actor",
+      "seed": 3,
+      "method": "source_only",
+      "clean_acc": 0.23333333333333334,
+      "shifted_acc": 0.2222222222222222,
+      "ece": 0.01530124355963719
+    },
+    {
+      "dataset": "actor",
+      "seed": 3,
+      "method": "tent_entropy",
+      "clean_acc": 0.23333333333333334,
+      "shifted_acc": 0.2222222222222222,
+      "ece": 0.015207339151575794
+    },
+    {
+      "dataset": "actor",
+      "seed": 3,
+      "method": "eata_filter",
+      "clean_acc": 0.23333333333333334,
+      "shifted_acc": 0.2111111111111111,
+      "ece": 0.004094016546960871
+    },
+    {
+      "dataset": "actor",
+      "seed": 3,
+      "method": "matcha_reliable",
+      "clean_acc": 0.23333333333333334,
+      "shifted_acc": 0.21666666666666667,
+      "ece": 0.009646702564266169
+    },
+    {
+      "dataset": "actor",
+      "seed": 3,
+      "method": "full_method",
+      "clean_acc": 0.23333333333333334,
+      "shifted_acc": 0.21666666666666667,
+      "ece": 0.009648951287851704
+    },
+    {
+      "dataset": "actor",
+      "seed": 4,
+      "method": "source_only",
+      "clean_acc": 0.2111111111111111,
+      "shifted_acc": 0.2111111111111111,
+      "ece": 0.004774794773045987
+    },
+    {
+      "dataset": "actor",
+      "seed": 4,
+      "method": "tent_entropy",
+      "clean_acc": 0.2111111111111111,
+      "shifted_acc": 0.2111111111111111,
+      "ece": 0.004671201312459544
+    },
+    {
+      "dataset": "actor",
+      "seed": 4,
+      "method": "eata_filter",
+      "clean_acc": 0.2111111111111111,
+      "shifted_acc": 0.2111111111111111,
+      "ece": 0.004667830221282865
+    },
+    {
+      "dataset": "actor",
+      "seed": 4,
+      "method": "matcha_reliable",
+      "clean_acc": 0.2111111111111111,
+      "shifted_acc": 0.2111111111111111,
+      "ece": 0.004656578110635551
+    },
+    {
+      "dataset": "actor",
+      "seed": 4,
+      "method": "full_method",
+      "clean_acc": 0.2111111111111111,
+      "shifted_acc": 0.2111111111111111,
+      "ece": 0.004667838942097796
+    },
+    {
+      "dataset": "film",
+      "seed": 0,
+      "method": "source_only",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.00550168484599331
+    },
+    {
+      "dataset": "film",
+      "seed": 0,
+      "method": "tent_entropy",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.005576052939616077
+    },
+    {
+      "dataset": "film",
+      "seed": 0,
+      "method": "eata_filter",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.005576601456616287
+    },
+    {
+      "dataset": "film",
+      "seed": 0,
+      "method": "matcha_reliable",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.005589808452687417
+    },
+    {
+      "dataset": "film",
+      "seed": 0,
+      "method": "full_method",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.0055790581137658835
+    },
+    {
+      "dataset": "film",
+      "seed": 1,
+      "method": "source_only",
+      "clean_acc": 0.215,
+      "shifted_acc": 0.205,
+      "ece": 0.002257891443171872
+    },
+    {
+      "dataset": "film",
+      "seed": 1,
+      "method": "tent_entropy",
+      "clean_acc": 0.215,
+      "shifted_acc": 0.205,
+      "ece": 0.0024218958452465744
+    },
+    {
+      "dataset": "film",
+      "seed": 1,
+      "method": "eata_filter",
+      "clean_acc": 0.215,
+      "shifted_acc": 0.205,
+      "ece": 0.002417032527204377
+    },
+    {
+      "dataset": "film",
+      "seed": 1,
+      "method": "matcha_reliable",
+      "clean_acc": 0.215,
+      "shifted_acc": 0.205,
+      "ece": 0.0024370960548077136
+    },
+    {
+      "dataset": "film",
+      "seed": 1,
+      "method": "full_method",
+      "clean_acc": 0.215,
+      "shifted_acc": 0.205,
+      "ece": 0.002427282282214699
+    },
+    {
+      "dataset": "film",
+      "seed": 2,
+      "method": "source_only",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.00716654363079669
+    },
+    {
+      "dataset": "film",
+      "seed": 2,
+      "method": "tent_entropy",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.007301335764943295
+    },
+    {
+      "dataset": "film",
+      "seed": 2,
+      "method": "eata_filter",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.0072982605918753
+    },
+    {
+      "dataset": "film",
+      "seed": 2,
+      "method": "matcha_reliable",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.007324871666148841
+    },
+    {
+      "dataset": "film",
+      "seed": 2,
+      "method": "full_method",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.00731751020946797
+    },
+    {
+      "dataset": "film",
+      "seed": 3,
+      "method": "source_only",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.01108100176956403
+    },
+    {
+      "dataset": "film",
+      "seed": 3,
+      "method": "tent_entropy",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.011353254486963671
+    },
+    {
+      "dataset": "film",
+      "seed": 3,
+      "method": "eata_filter",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.011344264527980374
+    },
+    {
+      "dataset": "film",
+      "seed": 3,
+      "method": "matcha_reliable",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.011397844117778833
+    },
+    {
+      "dataset": "film",
+      "seed": 3,
+      "method": "full_method",
+      "clean_acc": 0.2,
+      "shifted_acc": 0.2,
+      "ece": 0.011385451924830148
+    },
+    {
+      "dataset": "film",
+      "seed": 4,
+      "method": "source_only",
+      "clean_acc": 0.21,
+      "shifted_acc": 0.21,
+      "ece": 0.00013711559188891997
+    },
+    {
+      "dataset": "film",
+      "seed": 4,
+      "method": "tent_entropy",
+      "clean_acc": 0.21,
+      "shifted_acc": 0.21,
+      "ece": 8.072598278510701e-05
+    },
+    {
+      "dataset": "film",
+      "seed": 4,
+      "method": "eata_filter",
+      "clean_acc": 0.21,
+      "shifted_acc": 0.21,
+      "ece": 8.241263578742664e-05
+    },
+    {
+      "dataset": "film",
+      "seed": 4,
+      "method": "matcha_reliable",
+      "clean_acc": 0.21,
+      "shifted_acc": 0.21,
+      "ece": 9.933470724293736e-05
+    },
+    {
+      "dataset": "film",
+      "seed": 4,
+      "method": "full_method",
+      "clean_acc": 0.21,
+      "shifted_acc": 0.21,
+      "ece": 8.800085737853403e-05
+    }
+  ]
+}
