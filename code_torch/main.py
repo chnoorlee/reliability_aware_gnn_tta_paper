@@ -145,7 +145,7 @@ def run_one(seed, shift, intensity, hidden, dataset, backbone, train_epochs, ada
         # detector_calibration).
         detector = None
         start = time.perf_counter()
-        adapt_info = adapt_classifier(m, sb, method=method, seed=seed, steps=adapt_steps, detector=detector)
+        adapt_info = adapt_classifier(m, sb.unlabeled(), method=method, seed=seed, steps=adapt_steps, detector=detector)
         runtime = time.perf_counter() - start
         probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
         metrics = evaluate(probs[sb.test_idx], sb.y_np[sb.test_idx], sb.num_classes)

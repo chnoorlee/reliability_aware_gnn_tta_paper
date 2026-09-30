@@ -41,7 +41,7 @@ def run(seeds=(0, 1, 2, 3, 4)):
             sb = shift_bundle(base, seed, "feature_noise", 0.05)
             for method in METHOD_MAP:
                 m = model.clone()
-                adapt_classifier(m, sb, method=method, seed=seed, steps=35)
+                adapt_classifier(m, sb.unlabeled(), method=method, seed=seed, steps=35)
                 p = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                 metrics = evaluate(p[sb.test_idx], sb.y_np[sb.test_idx], sb.num_classes)
                 records.append({

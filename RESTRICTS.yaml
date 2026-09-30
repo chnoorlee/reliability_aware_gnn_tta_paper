@@ -1,0 +1,47 @@
+quality:
+  target_journal: Neurocomputing
+  no_fabricated_results: true
+  minimum_experiment_conditions: 15
+  required_ablations:
+    - full_method
+    - no_neighborhood_agreement
+    - no_structural_stability
+    - no_calibration_loss
+    - no_anti_forgetting
+    - entropy_all_nodes
+    - source_only
+  required_metrics:
+    - accuracy
+    - macro_f1
+    - nll
+    - ece
+    - brier
+    - runtime_seconds
+implementation:
+  language: Python
+  allowed_core_libraries:
+    - numpy
+    - json
+    - math
+    - time
+    - argparse
+    - pathlib
+    - csv
+  prohibited:
+    - fake_random_results
+    - hardcoded_metrics
+    - shell_execution_inside_code
+    - network_calls_inside_code
+  convergence_required: true
+  numpy_2_compatible: true
+paper:
+  sections:
+    - Introduction
+    - Related Work
+    - Methodology
+    - Experiments
+    - Results
+    - Discussion
+    - Limitations
+    - Conclusion
+  result_claim_policy: only_claim_values_present_in_results_json

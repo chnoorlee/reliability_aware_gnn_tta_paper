@@ -40,7 +40,7 @@ def _self_drift(model, base, seed, steps=20):
     src_probs = predict_fn(base.x_np, base.adj)
     src_conf = group_confidence(base.adj, src_probs)
     m = model.clone()
-    adapt_classifier(m, base, method="full_method", seed=seed, steps=steps, detector=None)
+    adapt_classifier(m, base.unlabeled(), method="full_method", seed=seed, steps=steps, detector=None)
     probs = _make_predict_fn(m)(base.x_np, base.adj)
     conf = group_confidence(base.adj, probs)
     return float(np.mean([abs(conf[k] - src_conf[k]) for k in src_conf])) + 1e-4
@@ -62,7 +62,7 @@ def threshold_calibration(seeds=(0, 1, 2, 3, 4)):
                 delta_star = k * delta_self
                 m = model.clone()
                 det = DetectorState(delta_tolerance=delta_star, phi_tolerance=0.20)
-                adapt_classifier(m, sb, method="full_method", seed=seed, steps=60, detector=det)
+                adapt_classifier(m, sb.unlabeled(), method="full_method", seed=seed, steps=60, detector=det)
                 p = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                 metrics = evaluate(p[sb.test_idx], sb.y_np[sb.test_idx], sb.num_classes)
                 records.append({
@@ -115,7 +115,7 @@ def dual_checkpoint_streaming(seeds=(0, 1, 2, 3, 4), k_auto=2.0):
                 # source-model confidence on this step's graph (stream-level reference)
                 base_conf = group_confidence(sb.adj, _make_predict_fn(model)(sb.x_np, sb.adj))
                 before_w = cur.classifier_weight().detach().clone()
-                adapt_classifier(cur, sb, method="full_method", seed=seed + step, steps=25, detector=None)
+                adapt_classifier(cur, sb.unlabeled(), method="full_method", seed=seed + step, steps=25, detector=None)
                 probs = _make_predict_fn(cur)(sb.x_np, sb.adj)
                 cur_conf = group_confidence(sb.adj, probs)
                 delta_t = float(np.mean([abs(cur_conf[k] - base_conf[k]) for k in base_conf]))

@@ -1,0 +1,49 @@
+# === Large / regenerable data, results, and artifacts ===
+data/
+results/
+results_torch/
+revision_*/
+artifacts/
+external_official/
+submission_package/
+model/
+
+# === Archives ===
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# === Model / array artifacts ===
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.h5
+*.hdf5
+
+# === Python bytecode and caches ===
+__pycache__/
+*.py[cod]
+*$py.class
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.eggs/
+*.egg-info/
+
+# === OS / editor ===
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/

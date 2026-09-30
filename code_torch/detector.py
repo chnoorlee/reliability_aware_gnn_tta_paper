@@ -1,15 +1,13 @@
-"""Closed-loop negative-adaptation detector — verbatim port of
-``code/detector.py`` (req#6: algorithm unchanged).
+"""State for the candidate-update rollback detector.
 
 Implements the unsupervised proxy from Section 3.6:
 
     Delta_t = (1/3) * sum_k | Conf_theta_t(G_k) - Conf_theta_0(G_k) |
     Phi_t   = (1/N)   * sum_i 1[ argmax p_i^(t) != argmax p_i^(0) ]
 
-Adaptation halts and rolls back to theta_{t-1} as soon as either quantity
-exceeds an operator-set tolerance Delta* or Phi*.  Only the import source of
-``group_confidence`` differs from the NumPy original (now this package's
-``reliability``); the math is identical.
+Each candidate is checked after its update.  A rejected candidate is never
+deployed.  One rejection retains the latest accepted checkpoint; two
+consecutive rejections restore the immutable source classifier and halt.
 """
 
 from __future__ import annotations
@@ -31,6 +29,11 @@ class DetectorState:
     triggered: bool = False
     trigger_step: Optional[int] = None
     trigger_reason: Optional[str] = None
+    strikes: int = 0
+    accepted_candidates: int = 0
+    rejected_candidates: int = 0
+    state: str = "ADAPTING"
+    decision_history: List[str] = field(default_factory=list)
 
     def to_dict(self) -> Dict:
         return {
@@ -41,6 +44,11 @@ class DetectorState:
             "triggered": self.triggered,
             "trigger_step": self.trigger_step,
             "trigger_reason": self.trigger_reason,
+            "strikes": self.strikes,
+            "accepted_candidates": self.accepted_candidates,
+            "rejected_candidates": self.rejected_candidates,
+            "state": self.state,
+            "decision_history": list(self.decision_history),
         }
 
 
@@ -55,6 +63,8 @@ def compute_detector_signals(adj, current_probs, source_probs, source_group_conf
 
 
 def detector_should_halt(state: DetectorState, delta: float, phi: float) -> Tuple[bool, Optional[str]]:
+    if not np.isfinite(delta) or not np.isfinite(phi):
+        return True, "nonfinite_proxy"
     if delta > state.delta_tolerance:
         return True, f"delta>{state.delta_tolerance:.3f}"
     if phi > state.phi_tolerance:

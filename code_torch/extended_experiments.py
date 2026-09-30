@@ -74,7 +74,7 @@ def large_scale_study(out_dir, seeds=(0, 1, 2), max_nodes=2500):
                         m = model.clone()
                         detector = DetectorState() if method == "full_method" else None
                         t0 = time.perf_counter()
-                        adapt_classifier(m, sb, method=method, seed=seed, steps=30, detector=detector)
+                        adapt_classifier(m, sb.unlabeled(), method=method, seed=seed, steps=30, detector=detector)
                         runtime = time.perf_counter() - t0
                         probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                         metrics = evaluate(probs[sb.test_idx], sb.y_np[sb.test_idx], sb.num_classes)
@@ -116,7 +116,7 @@ def real_webkb_study(out_dir, seeds=(0, 1, 2, 3, 4)):
                 for method in methods:
                     m = model.clone()
                     detector = DetectorState() if method == "full_method" else None
-                    adapt_classifier(m, sb, method=method, seed=seed, steps=40, detector=detector)
+                    adapt_classifier(m, sb.unlabeled(), method=method, seed=seed, steps=40, detector=detector)
                     probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                     metrics = evaluate(probs[sb.test_idx], sb.y_np[sb.test_idx], sb.num_classes)
                     records.append({
@@ -152,7 +152,7 @@ def streaming_tta_study(out_dir, seeds=(0, 1, 2, 3, 4)):
                 for method in methods:
                     m = running_models[method]
                     if method != "source_only":
-                        adapt_classifier(m, sb, method=method, seed=seed + step, steps=25,
+                        adapt_classifier(m, sb.unlabeled(), method=method, seed=seed + step, steps=25,
                                          detector=running_detector[method])
                     probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                     metrics = evaluate(probs[sb.test_idx], sb.y_np[sb.test_idx], sb.num_classes)
@@ -247,7 +247,7 @@ def adversarial_study(out_dir, seeds=(0, 1, 2, 3, 4)):
             for method in methods:
                 m = model.clone()
                 detector = DetectorState() if method == "full_method" else None
-                adapt_classifier(m, sb, method=method, seed=seed, steps=40, detector=detector)
+                adapt_classifier(m, sb.unlabeled(), method=method, seed=seed, steps=40, detector=detector)
                 probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                 metrics = evaluate(probs[sb.test_idx], sb.y_np[sb.test_idx], sb.num_classes)
                 records.append({

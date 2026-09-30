@@ -1,14 +1,9 @@
-"""Reliability estimator — verbatim port of the scoring logic from
-``code/adaptation.py`` (req#6: algorithm unchanged).
+"""Reliability estimator used by the canonical PyTorch implementation.
 
-These functions operate entirely in NumPy-adjacency / probability space, exactly
-as in the original paper.  The *only* change versus ``code/adaptation.py`` is
-that the structural-stability and reliability routines take a ``predict_fn``
-closure ``(x_np, adj_np) -> probs_np`` instead of a model object, so the same
-NumPy math can drive a PyTorch Geometric forward pass.  The numerical logic
-(weights, thresholds, quantiles, mixing coefficients) is identical.
-
-Source of truth: ``code/adaptation.py``.  Keep the two in sync.
+The reliability score is a detached selection weight: it is recomputed from the
+current predictions at every adaptation attempt but is not differentiated.  The
+structural-stability routine accepts a ``predict_fn`` closure so that the same
+NumPy graph perturbations can drive a PyTorch Geometric forward pass.
 """
 
 from __future__ import annotations
@@ -146,20 +141,36 @@ def reliability_scores(predict_fn, x, adj, seed=0, use_agreement=True, use_stabi
     degree_weight = 0.2 if use_degree else 0.0
     base = (confidence_weight * c + agreement_weight * a + stability_weight * s
             + source_weight * src + degree_weight * d)
-    threshold = float(np.quantile(base, 0.6 if (use_agreement or use_stability) else 0.5))
+    threshold = float(np.quantile(base, 0.6))
     scale = float(np.std(base) + 1e-6)
     raw = np.clip((base - threshold) / scale, -6.0, 6.0)
     r = 1.0 / (1.0 + np.exp(-raw))
     return r, {"confidence": c, "agreement": a, "stability": s, "source": src, "degree": d, "estimated_homophily": homophily}
 
 
-def group_confidence(adj, probs):
-    deg = degree_vector(adj)
+def degree_group_masks(adj):
+    """Return three deterministic, near-equal degree groups.
+
+    Quantile thresholding can create empty groups when many nodes have the same
+    degree.  Stable sorting by ``(degree, node_id)`` followed by ``array_split``
+    makes the partition fixed before adaptation and non-empty whenever the graph
+    contains at least three nodes.
+    """
+    deg = np.asarray(degree_vector(adj), dtype=float)
+    node_id = np.arange(len(deg), dtype=int)
+    order = np.lexsort((node_id, deg))
+    masks = []
+    for indices in np.array_split(order, 3):
+        mask = np.zeros(len(deg), dtype=bool)
+        mask[indices] = True
+        masks.append(mask)
+    return {name: mask for name, mask in zip(("low", "mid", "high"), masks)}
+
+
+def group_confidence(adj, probs, groups=None):
+    groups = degree_group_masks(adj) if groups is None else groups
     conf = np.max(probs, axis=1)
-    low = deg <= np.quantile(deg, 0.33)
-    mid = (deg > np.quantile(deg, 0.33)) & (deg <= np.quantile(deg, 0.66))
-    high = deg > np.quantile(deg, 0.66)
     out = {}
-    for name, mask in [("low", low), ("mid", mid), ("high", high)]:
+    for name, mask in groups.items():
         out[name] = float(np.mean(conf[mask])) if np.any(mask) else 0.0
     return out

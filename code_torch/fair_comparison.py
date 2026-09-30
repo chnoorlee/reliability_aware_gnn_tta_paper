@@ -135,7 +135,7 @@ def run(out_dir, quick=False):
                     model._delta_self_cache = _self_drift(model, base, seed)
                 mf = model.clone(); det = DetectorState(delta_tolerance=2.0 * model._delta_self_cache)
                 t = time.perf_counter()
-                adapt_classifier(mf, sb, method="full_method", seed=seed, steps=FULL_STEPS, detector=det)
+                adapt_classifier(mf, sb.unlabeled(), method="full_method", seed=seed, steps=FULL_STEPS, detector=det)
                 pf = mf.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                 rec("full_method", pf, time.perf_counter() - t,
                     {"detector_triggered": bool(det.triggered), "delta_star": det.delta_tolerance})

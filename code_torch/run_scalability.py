@@ -49,7 +49,7 @@ def run_scalability():
                     m = model.clone()
                     t0 = time.time()
                     if method != "source_only":
-                        adapt_classifier(m, sb, method=method, seed=seed, steps=ADAPT_STEPS,
+                        adapt_classifier(m, sb.unlabeled(), method=method, seed=seed, steps=ADAPT_STEPS,
                                          lr=0.01, lambda_cal=0.1, lambda_af=0.01)
                     runtime = time.time() - t0
                     probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()

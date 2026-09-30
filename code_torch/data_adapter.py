@@ -4,7 +4,8 @@ Loads graphs through the existing NumPy loaders (``_np_bridge``) and converts
 them to torch tensors + ``edge_index``.  A :class:`GraphBundle` keeps *both* the
 NumPy adjacency (used by the reliability estimator / detector, which operate in
 NumPy-adj space exactly as in the original paper) and the torch tensors (used by
-the PyG model forward pass).
+the PyG model forward pass).  Adaptation receives :class:`UnlabeledGraphView`,
+not the label-bearing :class:`GraphBundle` used by evaluation code.
 """
 
 from __future__ import annotations
@@ -16,13 +17,11 @@ import torch
 
 from _np_bridge import (
     apply_shift,
-    degree_vector,
     is_sparse_matrix,
     load_public_graph_dataset,
     make_contextual_sbm,
     make_heterophily_benchmark,
     split_indices,
-    upper_triangle_edges,
 )
 
 DEVICE = torch.device("cpu")  # small full-batch graphs: CPU is fast and deterministic
@@ -50,6 +49,24 @@ def _mask(idx, n) -> torch.Tensor:
     return m
 
 
+@dataclass(frozen=True, slots=True)
+class UnlabeledGraphView:
+    """Immutable, slot-restricted payload allowed across the adaptation boundary.
+
+    The adaptation entry point additionally requires this exact concrete type,
+    preventing a subclass from reintroducing label fields.
+    """
+
+    x_np: np.ndarray
+    adj: object
+    x: torch.Tensor
+    edge_index: torch.Tensor
+
+    @property
+    def num_nodes(self) -> int:
+        return int(self.x_np.shape[0])
+
+
 @dataclass
 class GraphBundle:
     # NumPy-space (for reliability / detector / metrics, paper-identical)
@@ -72,6 +89,16 @@ class GraphBundle:
     def num_nodes(self) -> int:
         return int(self.x_np.shape[0])
 
+    def unlabeled(self) -> UnlabeledGraphView:
+        """Return a label-free view for test-time adaptation."""
+
+        return UnlabeledGraphView(
+            x_np=self.x_np,
+            adj=self.adj,
+            x=self.x,
+            edge_index=self.edge_index,
+        )
+
 
 def build_bundle(x_np, adj, y_np, train_idx, val_idx, test_idx) -> GraphBundle:
     n = x_np.shape[0]
@@ -79,16 +106,31 @@ def build_bundle(x_np, adj, y_np, train_idx, val_idx, test_idx) -> GraphBundle:
     x = torch.tensor(np.asarray(x_np), dtype=torch.float32, device=DEVICE)
     y = torch.tensor(np.asarray(y_np), dtype=torch.long, device=DEVICE)
     return GraphBundle(
-        x_np=np.asarray(x_np), adj=adj, y_np=np.asarray(y_np),
-        train_idx=np.asarray(train_idx), val_idx=np.asarray(val_idx), test_idx=np.asarray(test_idx),
-        x=x, edge_index=adj_to_edge_index(adj), y=y,
-        train_mask=_mask(train_idx, n), val_mask=_mask(val_idx, n), test_mask=_mask(test_idx, n),
+        x_np=np.asarray(x_np),
+        adj=adj,
+        y_np=np.asarray(y_np),
+        train_idx=np.asarray(train_idx),
+        val_idx=np.asarray(val_idx),
+        test_idx=np.asarray(test_idx),
+        x=x,
+        edge_index=adj_to_edge_index(adj),
+        y=y,
+        train_mask=_mask(train_idx, n),
+        val_mask=_mask(val_idx, n),
+        test_mask=_mask(test_idx, n),
         num_classes=num_classes,
     )
 
 
-def load_bundle(dataset, seed=0, n=None, max_nodes=None, graph_backend="auto",
-                train_per_class=20, val_per_class=30) -> GraphBundle:
+def load_bundle(
+    dataset,
+    seed=0,
+    n=None,
+    max_nodes=None,
+    graph_backend="auto",
+    train_per_class=20,
+    val_per_class=30,
+) -> GraphBundle:
     """Load a dataset through the NumPy loaders and wrap it as a GraphBundle."""
     heterophily = {"texas", "cornell", "wisconsin", "actor", "film"}
     if dataset == "synthetic":
@@ -114,5 +156,9 @@ def shift_bundle(base: GraphBundle, seed, shift, intensity) -> GraphBundle:
     """
     x_t, adj_t = apply_shift(seed, base.x_np, base.adj, base.y_np, shift, intensity)
     if len(x_t) != len(base.y_np):
-        x_t, adj_t = base.x_np.copy(), base.adj.copy() if not is_sparse_matrix(base.adj) else base.adj.copy()
-    return build_bundle(x_t, adj_t, base.y_np, base.train_idx, base.val_idx, base.test_idx)
+        x_t, adj_t = base.x_np.copy(), (
+            base.adj.copy() if not is_sparse_matrix(base.adj) else base.adj.copy()
+        )
+    return build_bundle(
+        x_t, adj_t, base.y_np, base.train_idx, base.val_idx, base.test_idx
+    )

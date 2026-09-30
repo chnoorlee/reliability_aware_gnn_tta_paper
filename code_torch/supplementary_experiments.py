@@ -51,7 +51,7 @@ def backbone_study(out_dir, seeds=(0, 1, 2), conditions=None):
                     m = model.clone()
                     detector = DetectorState() if method == "full_method" else None
                     t0 = time.perf_counter()
-                    adapt_classifier(m, sb, method=method, seed=seed, steps=60, detector=detector)
+                    adapt_classifier(m, sb.unlabeled(), method=method, seed=seed, steps=60, detector=detector)
                     runtime = time.perf_counter() - t0
                     probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                     metrics = evaluate(probs[sb.test_idx], sb.y_np[sb.test_idx], sb.num_classes)
@@ -126,7 +126,7 @@ def detector_sensitivity(out_dir, seeds=(0, 1, 2)):
             for delta_tol, phi_tol in tolerance_grid:
                 m = model.clone()
                 detector = DetectorState(delta_tolerance=delta_tol, phi_tolerance=phi_tol)
-                adapt_classifier(m, sb, method="full_method", seed=seed, steps=60, detector=detector)
+                adapt_classifier(m, sb.unlabeled(), method="full_method", seed=seed, steps=60, detector=detector)
                 probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                 metrics = evaluate(probs[sb.test_idx], sb.y_np[sb.test_idx], sb.num_classes)
                 records.append({"seed": seed, "shift": shift, "intensity": intensity,
@@ -153,7 +153,7 @@ def lambda_sensitivity(out_dir, seeds=(0, 1, 2)):
             model, base, sb = _build(seed, shift, intensity, n=300, hidden=24)
             for lam_cal, lam_af in lambda_grid:
                 m = model.clone()
-                adapt_classifier(m, sb, method="full_method", seed=seed, steps=60,
+                adapt_classifier(m, sb.unlabeled(), method="full_method", seed=seed, steps=60,
                                  lambda_cal=lam_cal, lambda_af=lam_af, detector=None)
                 probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                 metrics = evaluate(probs[sb.test_idx], sb.y_np[sb.test_idx], sb.num_classes)
@@ -176,7 +176,7 @@ def drift_trajectory(out_dir, seeds=(0, 1, 2)):
         for shift, intensity in conditions:
             model, base, sb = _build(seed, shift, intensity, n=300, hidden=24)
             m = model.clone()
-            info = adapt_classifier(m, sb, method="full_method", seed=seed, steps=60, detector=None)
+            info = adapt_classifier(m, sb.unlabeled(), method="full_method", seed=seed, steps=60, detector=None)
             drift = info["drift_trace"]
             for step in range(len(drift["low"])):
                 records.append({"seed": seed, "shift": shift, "intensity": intensity, "step": step,

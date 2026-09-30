@@ -1,0 +1,4 @@
+# QA toolchain used for the 2026-08-19 final validation.
+pytest==8.2.0
+black==25.9.0
+ruff==0.12.0

@@ -42,6 +42,29 @@ class _GNNBase(nn.Module):
     # whose weight is the adapted classifier (the NumPy ``W1``).
     _classifier: nn.Module
 
+    def _initialize_source_anchor_storage(self) -> None:
+        """Register a shape-stable, persistent source-classifier anchor."""
+
+        self.register_buffer(
+            "source_classifier_weight",
+            torch.zeros_like(self.classifier_weight().detach()),
+            persistent=True,
+        )
+        self.register_buffer(
+            "source_classifier_anchor_valid",
+            torch.tensor(
+                False, dtype=torch.bool, device=self.classifier_weight().device
+            ),
+            persistent=True,
+        )
+
+    @torch.no_grad()
+    def set_source_classifier_anchor(self) -> None:
+        """Freeze the current classifier as the validated source checkpoint."""
+
+        self.source_classifier_weight.copy_(self.classifier_weight().detach())
+        self.source_classifier_anchor_valid.fill_(True)
+
     def classifier_parameters(self):
         return list(self._classifier.parameters())
 
@@ -96,6 +119,7 @@ class GCN(_GNNBase):
         self.conv2 = GCNConv(hidden_dim, out_dim)
         self.dropout = dropout
         self._classifier = self.conv2.lin
+        self._initialize_source_anchor_storage()
 
     def forward(self, x, edge_index):
         h = self.conv1(x, edge_index)
@@ -110,15 +134,22 @@ class GAT(_GNNBase):
     fixing the NumPy ``TwoLayerGAT`` instability (synthetic clean ~0.62 -> 0.95+).
     """
 
-    def __init__(self, in_dim, hidden_dim, out_dim, heads=8, use_bn=True, dropout=0.6, seed=0):
+    def __init__(
+        self, in_dim, hidden_dim, out_dim, heads=8, use_bn=True, dropout=0.6, seed=0
+    ):
         super().__init__()
         set_seed(seed)
         self.conv1 = GATConv(in_dim, hidden_dim, heads=heads, dropout=dropout)
         self.bn = nn.BatchNorm1d(hidden_dim * heads) if use_bn else nn.Identity()
-        self.conv2 = GATConv(hidden_dim * heads, out_dim, heads=1, concat=False, dropout=dropout)
+        self.conv2 = GATConv(
+            hidden_dim * heads, out_dim, heads=1, concat=False, dropout=dropout
+        )
         self.dropout = dropout
         # Final classifier weight = source->target projection of the 2nd attention layer.
-        self._classifier = self.conv2.lin if hasattr(self.conv2, "lin") else self.conv2.lin_src
+        self._classifier = (
+            self.conv2.lin if hasattr(self.conv2, "lin") else self.conv2.lin_src
+        )
+        self._initialize_source_anchor_storage()
 
     def forward(self, x, edge_index):
         h = F.dropout(x, p=self.dropout, training=self.training)
@@ -142,6 +173,7 @@ class GraphSAGE(_GNNBase):
         # SAGEConv's output projection is ``lin_l`` (root) + ``lin_r`` (neighbor).
         # The classifier weight we adapt is the root linear ``lin_l``.
         self._classifier = self.conv2.lin_l
+        self._initialize_source_anchor_storage()
 
     def forward(self, x, edge_index):
         h = self.conv1(x, edge_index)
@@ -157,7 +189,17 @@ class APPNPNet(_GNNBase):
     (``lin2``) is the classifier ``W1``; propagation is parameter-free.
     """
 
-    def __init__(self, in_dim, hidden_dim, out_dim, K=10, alpha=0.15, use_bn=True, dropout=0.5, seed=0):
+    def __init__(
+        self,
+        in_dim,
+        hidden_dim,
+        out_dim,
+        K=10,
+        alpha=0.15,
+        use_bn=True,
+        dropout=0.5,
+        seed=0,
+    ):
         super().__init__()
         set_seed(seed)
         self.lin1 = nn.Linear(in_dim, hidden_dim)
@@ -166,6 +208,7 @@ class APPNPNet(_GNNBase):
         self.prop = APPNPProp(K=K, alpha=alpha)
         self.dropout = dropout
         self._classifier = self.lin2
+        self._initialize_source_anchor_storage()
 
     def forward(self, x, edge_index):
         h = F.dropout(x, p=self.dropout, training=self.training)
@@ -184,11 +227,24 @@ def make_model(backbone, in_dim, hidden_dim, out_dim, use_bn=True, seed=0, **kwa
     backbone = backbone.lower()
     if backbone not in BACKBONES:
         raise ValueError(f"Unknown backbone: {backbone}")
-    return BACKBONES[backbone](in_dim, hidden_dim, out_dim, use_bn=use_bn, seed=seed, **kwargs)
+    return BACKBONES[backbone](
+        in_dim, hidden_dim, out_dim, use_bn=use_bn, seed=seed, **kwargs
+    )
 
 
-def train_model(model, x, edge_index, y, train_mask, val_mask, epochs=200, lr=0.01,
-                weight_decay=5e-4, patience=50, exclude_bn_bias_wd=False):
+def train_model(
+    model,
+    x,
+    edge_index,
+    y,
+    train_mask,
+    val_mask,
+    epochs=200,
+    lr=0.01,
+    weight_decay=5e-4,
+    patience=50,
+    exclude_bn_bias_wd=False,
+):
     """Full-batch supervised training with early stopping on validation NLL.
 
     Returns ``{"epochs", "best_val_loss"}`` and leaves ``model`` loaded with the
@@ -204,10 +260,16 @@ def train_model(model, x, edge_index, y, train_mask, val_mask, epochs=200, lr=0.
         for name, p in model.named_parameters():
             (no_decay if (".bn" in name or name.endswith(".bias")) else decay).append(p)
         optimizer = torch.optim.Adam(
-            [{"params": decay, "weight_decay": weight_decay},
-             {"params": no_decay, "weight_decay": 0.0}], lr=lr)
+            [
+                {"params": decay, "weight_decay": weight_decay},
+                {"params": no_decay, "weight_decay": 0.0},
+            ],
+            lr=lr,
+        )
     else:
-        optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
+        optimizer = torch.optim.Adam(
+            model.parameters(), lr=lr, weight_decay=weight_decay
+        )
     best_val = float("inf")
     best_state = model.snapshot()
     stale = 0
@@ -237,5 +299,5 @@ def train_model(model, x, edge_index, y, train_mask, val_mask, epochs=200, lr=0.
     # Source anchor for the anti-forgetting term (the NumPy ``w1_source``).  It is
     # set once at training end and survives ``clone()``; repeated adaptation calls
     # (e.g. streaming TTA) keep pulling toward the *original* source classifier.
-    model.source_classifier_weight = model.classifier_weight().detach().clone()
+    model.set_source_classifier_anchor()
     return {"epochs": last_epoch + 1, "best_val_loss": best_val}

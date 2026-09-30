@@ -90,7 +90,7 @@ def _self_drift(model, base, seed, steps=20):
     predict_fn = _make_predict_fn(model)
     src_conf = group_confidence(base.adj, predict_fn(base.x_np, base.adj))
     m = model.clone()
-    adapt_classifier(m, base, method="full_method", seed=seed, steps=steps, detector=None)
+    adapt_classifier(m, base.unlabeled(), method="full_method", seed=seed, steps=steps, detector=None)
     conf = group_confidence(base.adj, _make_predict_fn(m)(base.x_np, base.adj))
     return float(np.mean([abs(conf[k] - src_conf[k]) for k in src_conf])) + 1e-4
 
@@ -111,7 +111,7 @@ def signal_ablation(seeds=(0, 1, 2, 3, 4)):
                     # (i) downstream adaptation metrics under this signal ablation
                     m = model.clone()
                     t0 = time.perf_counter()
-                    info = adapt_classifier(m, sb, method=method, seed=seed, steps=60, detector=None)
+                    info = adapt_classifier(m, sb.unlabeled(), method=method, seed=seed, steps=60, detector=None)
                     runtime = time.perf_counter() - t0
                     probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                     metrics = evaluate(probs[sb.test_idx], sb.y_np[sb.test_idx], sb.num_classes)
@@ -152,7 +152,7 @@ def homophily_robustness(seeds=(0, 1, 2, 3, 4)):
             measured_h = float(parts["estimated_homophily"])
             for delta in deltas:
                 m = model.clone()
-                adapt_classifier(m, sb, method="full_method", seed=seed, steps=60,
+                adapt_classifier(m, sb.unlabeled(), method="full_method", seed=seed, steps=60,
                                  detector=None, rel_kwargs={"homophily_delta": delta})
                 probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                 metrics = evaluate(probs[sb.test_idx], sb.y_np[sb.test_idx], sb.num_classes)
@@ -190,7 +190,7 @@ def detector_operating(seeds=(0, 1, 2, 3, 4)):
                 src_acc = float(evaluate(src_probs[sb.test_idx], sb.y_np[sb.test_idx],
                                          sb.num_classes)["accuracy"])
                 m_no = model.clone()
-                adapt_classifier(m_no, sb, method="full_method", seed=seed, steps=60, detector=None)
+                adapt_classifier(m_no, sb.unlabeled(), method="full_method", seed=seed, steps=60, detector=None)
                 no_det_probs = m_no.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                 no_det_acc = float(evaluate(no_det_probs[sb.test_idx], sb.y_np[sb.test_idx],
                                             sb.num_classes)["accuracy"])
@@ -198,7 +198,7 @@ def detector_operating(seeds=(0, 1, 2, 3, 4)):
                     delta_tol = 2.0 * delta_self if name == "auto" else dtol
                     m = model.clone()
                     det = DetectorState(delta_tolerance=delta_tol, phi_tolerance=ptol)
-                    adapt_classifier(m, sb, method="full_method", seed=seed, steps=60, detector=det)
+                    adapt_classifier(m, sb.unlabeled(), method="full_method", seed=seed, steps=60, detector=det)
                     probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                     acc = float(evaluate(probs[sb.test_idx], sb.y_np[sb.test_idx],
                                          sb.num_classes)["accuracy"])
@@ -238,7 +238,7 @@ def ece_bin_sensitivity(seeds=(0, 1, 2, 3, 4)):
                     probs = predict_fn(sb.x_np, sb.adj)
                 else:
                     m = model.clone()
-                    adapt_classifier(m, sb, method="full_method", seed=seed, steps=60, detector=None)
+                    adapt_classifier(m, sb.unlabeled(), method="full_method", seed=seed, steps=60, detector=None)
                     probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                 p_test = probs[sb.test_idx]
                 y_test = sb.y_np[sb.test_idx]
@@ -324,12 +324,12 @@ def degree_fairness(seeds=(0, 1, 2, 3, 4)):
                         rel_info = {"mean_reliability": 1.0, "selected_fraction": 1.0}
                     elif method == "full_method":
                         m = model.clone()
-                        rel_info = adapt_classifier(m, sb, method="full_method", seed=seed,
+                        rel_info = adapt_classifier(m, sb.unlabeled(), method="full_method", seed=seed,
                                                     steps=60, detector=None)
                         probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                     else:  # no_degree_prior
                         m = model.clone()
-                        rel_info = adapt_classifier(m, sb, method="no_degree_prior", seed=seed,
+                        rel_info = adapt_classifier(m, sb.unlabeled(), method="no_degree_prior", seed=seed,
                                                     steps=60, detector=None)
                         probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
                     p_dec = probs[test_idx][mask]
@@ -382,7 +382,7 @@ def proxy_failure(seeds=(0, 1, 2, 3, 4)):
                                      sb.num_classes)["accuracy"])
             # adapt without detector, collect full traces
             m = model.clone()
-            info = adapt_classifier(m, sb, method="full_method", seed=seed, steps=60, detector=None)
+            info = adapt_classifier(m, sb.unlabeled(), method="full_method", seed=seed, steps=60, detector=None)
             probs = m.predict_probs(sb.x, sb.edge_index).cpu().numpy()
             final_acc = float(evaluate(probs[sb.test_idx], sb.y_np[sb.test_idx],
                                        sb.num_classes)["accuracy"])
