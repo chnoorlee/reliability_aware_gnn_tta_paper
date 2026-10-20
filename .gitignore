@@ -40,6 +40,7 @@ htmlcov/
 .nox/
 .eggs/
 *.egg-info/
+.reliability_audit_artifact_v1.publish.lock
 
 # === OS / editor ===
 .DS_Store

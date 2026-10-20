@@ -1,105 +1,101 @@
-# Reliability-Aware Graph Test-Time Adaptation with a Diagnostic Operating Envelope
+# Reliability Auditing for Graph Neural Network Test-Time Adaptation
 
-> Reliability-Aware Graph Test-Time Adaptation with a Diagnostic Operating Envelope
+Code and evidence for **Reliability Auditing for Graph Neural Network Test-Time Adaptation: Identifiability, Risk-Coverage, and Rollback**.
 
-This repository contains the code accompanying the paper "Reliability-Aware Graph Test-Time Adaptation with a Diagnostic Operating Envelope". The implementation focuses on improving the reliability and robustness of graph neural networks (GNNs) under distribution shift or uncertain data quality by estimating a per-sample Diagnostic Operating Envelope (DOE) at test time and applying reliability-aware test-time adaptation (TTA).
+This repository studies the decision made after a graph test-time adaptation (TTA) candidate has been produced: deploy the candidate or retain an immutable source model. It implements source-relative label-free gates, transactional rollback, held-out risk-coverage analyses, a scope-matched replay, and an independent replay of configurations from the official TSA repository.
 
-## Highlights
-- Introduces a Diagnostic Operating Envelope (DOE) to estimate per-sample reliability at test time.
-- Combines DOE with graph structural information to drive reliability-aware adaptation strategies.
-- Provides reproducible training, evaluation, and TTA scripts to reproduce the paper's experiments.
+The evidence supports an audit protocol, not a distribution-free safety guarantee. A gate can prevent substantial aggregate downside while still admitting harmful candidates or collapsing toward zero coverage.
 
-## Requirements
-- Python 3.8+
-- PyTorch
-- (Optional) PyTorch Geometric or other GNN libraries
-- numpy, scipy, scikit-learn, tqdm, pyyaml
+## Main findings
 
-Install dependencies (example):
+- In 216 held-out replays across six graphs and two entropy adapters, the frozen gate prevented **87.3%** of material downside for weighted entropy and **77.5%** for uniform entropy.
+- The same gate still admitted **20 of 62** and **30 of 62** materially harmful candidates, respectively. Mean deployed gains were **-0.56** and **-1.04 percentage points**.
+- Fixed-threshold decisions computed over all target nodes and benchmark evaluation nodes disagreed in **12 of 216** same-trajectory events, so proxy scope is part of the deployment claim.
+- In 72 official-configuration attempts, T3A and TSA-T3A deployed no candidates. Matcha-T3A deployed 1 of 24 attempts and produced 5 non-finite candidates that failed closed.
+- Prediction turnover had the strongest pooled harm-ranking point estimates, but its within-environment ordering weakened. It is a diagnostic lead, not a universal directional risk score.
 
-python -m venv venv
-source venv/bin/activate  # macOS / Linux
-venv\Scripts\activate     # Windows
-pip install -r requirements.txt
+See [EXPERIMENTAL_FINDINGS.md](EXPERIMENTAL_FINDINGS.md) for the denominators, operating points, uncertainty interpretation, and evidence boundaries.
 
-Adjust the commands above if the project provides environment.yml or other environment specification files.
+## Repository layout
 
-## Quick start
-Below are example commands; replace script names and paths with the repository's actual scripts and config files if they differ.
+| Path | Purpose |
+|---|---|
+| `code_torch/` | Current PyTorch/PyG controllers, audit runners, analyses, and tests |
+| `code/` | Shared data utilities and the earlier NumPy reference implementation |
+| `results/`, `results_torch/` | Earlier benchmark and migration results retained for provenance |
+| `ARTIFACT_README.md` | Commands and boundaries for the frozen audit artifact |
+| `submission_artifact_manifest.json` | Repository-relative SHA-256 inventory for the artifact |
+| `reliability_audit_artifact_v1.zip` | Deterministic package containing current code, frozen audit inputs, derived analyses, tests, and manuscript sources |
 
-1) Train a baseline model
+The authoritative evidence for the current manuscript is the audit artifact and its manifest. Earlier benchmark outputs in `results/` and `results_torch/` are not substitutes for the frozen audit inputs identified in `ARTIFACT_README.md`.
 
-python code_torch/main.py --dataset synthetic --seed 0 --device 0
+## Verify the artifact
 
-2) Test without adaptation
+From the repository root:
 
-python code_torch/main.py --dataset synthetic --mode test --checkpoint checkpoints/baseline.pth --device 0
+```powershell
+$env:PYTHONUTF8='1'
+$env:PYTHONIOENCODING='utf-8'
+python code_torch/build_submission_artifact.py --verify-only
+```
 
-3) Run test-time adaptation (TTA) with DOE
+Expected archive SHA-256:
 
-python code_torch/main.py --dataset synthetic --mode tta --checkpoint checkpoints/baseline.pth --doe-config configs/doe.yaml --device 0
+```text
+861046f83c7c6f3494750189338e6b7756ebaa503df994684047c0d9a1ba9eeb
+```
 
-4) Evaluate results
+The verifier checks the current files, external and embedded manifests, canonical ZIP metadata, CRCs, sizes, hashes, and deterministic archive bytes.
 
-python code_torch/evaluate.py --preds results_torch/preds.json --labels data/synthetic/labels.csv
+## Run the validated analysis suite
 
-Notes: the repository contains both a NumPy reference implementation under `code/` and a PyTorch/PyG migration under `code_torch/`. Use the folder matching your desired backend.
+Create an environment compatible with `requirements.txt`, add the QA dependencies in `requirements-dev.txt`, then run:
 
-## Data
-- Place datasets under `data/{dataset_name}/` as required by the code and configuration files.
-- If preprocessing is required, run any provided scripts, for example:
+```powershell
+Push-Location code_torch
+python -m pytest tests -q
+Pop-Location
+```
 
-python code/scripts/preprocess.py --input raw_data/... --out data/{dataset_name}/
+The dependency versions record the intended audit environment. `environment_snapshot.json` records the imports exercised during final QA. The requirements file has not been established as a portable clean-environment lock because the source host contained conflicting PyTorch distribution metadata.
 
-The `code/` and `code_torch/` folders include convenience downloaders for public datasets used in the experiments (see their README files).
+To test exactly the code distributed in the artifact, extract `reliability_audit_artifact_v1.zip`, enter its root, and run:
 
-## Reproducing experiments
-Recommended steps to reproduce the paper's experiments:
-1. Set a fixed random seed (use --seed option).
-2. Confirm compatible PyTorch and GNN library versions (see requirements.txt).
-3. Train the baseline model and save checkpoints.
-4. Run the TTA procedure using the saved checkpoint and DOE configuration.
-5. Collect metrics and compare against baselines (accuracy, AUC, MAE/RMSE, calibration, reliability curves).
+```powershell
+Push-Location code_torch
+python -m pytest tests -q
+Pop-Location
+```
 
-Common metrics:
-- Classification: Accuracy, AUC, F1, Expected Calibration Error (ECE)
-- Regression: MAE, RMSE
-- Reliability: confidence-vs-performance curves, DOE-stratified performance
+## Reproduce the reported analyses
 
-## Repository structure (overview)
-- configs/        # Configuration files for training, TTA, DOE
-- data/           # Dataset directory
-- code/           # NumPy reference implementation and scripts
-- code_torch/     # PyTorch / PyG implementation and experiment runner
-- models/         # Model and GNN architecture definitions (if present)
-- methods/        # TTA and DOE algorithm implementations (if present)
-- scripts/        # Training / evaluation / preprocessing scripts
-- checkpoints/    # Saved model weights
-- results_torch/  # Experiment outputs for PyTorch runs
-- notebooks/      # Analysis and visualization notebooks
-- docs/           # Supplementary materials
+These commands consume frozen raw results. They recompute reported analyses and do not rerun adaptation or retune the gate.
 
-If the repository already contains a different structure, follow its existing layout and README files inside `code/` and `code_torch/` for backend-specific instructions.
+```powershell
+python code_torch/stage4_reanalysis.py `
+  --heldout revision_2026-08-19/stage4_fresh_full/heldout_endpoint_final_current/results.json `
+  --official revision_2026-08-19/official_tsa_default_label_isolated_audit_v2/results.json `
+  --out-dir revision_2026-08-19/stage4_fresh_full/reanalysis_current_final_10k_1 `
+  --bootstrap-replicates 10000
 
-## Logging and visualization
-- Save model checkpoints, predictions (JSON/CSV), and logs (TensorBoard or wandb).
-- Suggested visualizations: reliability vs. performance curves, confidence histograms, DOE-based stratified results, example graphs with predicted labels and confidences.
+python code_torch/stage5_selective_audit.py `
+  --heldout revision_2026-08-19/stage4_fresh_full/heldout_endpoint_final_current/results.json `
+  --official revision_2026-08-19/official_tsa_default_label_isolated_audit_v2/results.json `
+  --out-dir revision_2026-09-02_stage5_redesign/selective_audit `
+  --bootstrap-replicates 10000
 
-## Citation
-If you use this code, please cite the paper (replace with final publication details):
+python code_torch/scope_replay_analysis.py `
+  --original revision_2026-08-19/stage4_fresh_full/heldout_endpoint_final_current/results.json `
+  --replay revision_2026-09-02_stage5_redesign/scope_matched_heldout_v2/results.json `
+  --out-dir revision_2026-09-02_stage5_redesign/scope_replay_analysis
+```
 
-@inproceedings{author2026reliability,
-  title={Reliability-Aware Graph Test-Time Adaptation with a Diagnostic Operating Envelope},
-  author={Author, A. and Author, B.},
-  booktitle={Proceedings of ...},
-  year={2026},
-}
+These commands overwrite derived outputs. Run them in an extracted copy when the distributed artifact hashes must remain unchanged.
 
-## License
-See the LICENSE file in the repository root for license details. If no license is present, add one before distributing the code (common choices: MIT, Apache-2.0).
+## Third-party audit dependency
 
-## Contributing
-Issues and pull requests are welcome. For bugs or reproduction discrepancies, please open an issue. For major changes, open a discussion or an issue first to propose the change.
+The independent official audit uses `https://github.com/Graph-COM/TSA.git` at commit `cddde28bedcdaf0da68f8c7d9f6c9c45fe9e67b6`. That checkout and its data are not redistributed here. The local wrapper is `code_torch/official_tsa_risk_audit.py`; upstream licenses and terms continue to apply.
 
-## Contact
-Repository owner: chnoorlee. Open issues for questions or contact the authors listed in the paper.
+## Evidence boundary
+
+The controlled audit contains six graph identities and three seeds. Its graph-block and hierarchical intervals are composition-sensitivity analyses, not population guarantees. The official replay is a same-backbone diagnostic rather than a ranking of published methods. Numerical failures, zero-coverage results, and negative results are retained in the artifact.
